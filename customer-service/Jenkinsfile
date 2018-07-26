@@ -24,7 +24,7 @@ node {
         }
 
         stage ('Final') {
-            build job: 'gateway-service', wait: false
+            build job: 'gateway-service-pipeline', wait: false
         }      
     }
 }
