@@ -2,9 +2,7 @@
 
 [code language="java"]
 node {
-
     withMaven(maven:'maven') {
-
         stage('Checkout') {
             git url: 'https://github.com/Cognizant-Ups/sample-spring-microservices.git', credentialsId: 'github', branch: 'master'
         }
@@ -29,9 +27,7 @@ node {
         }
 
         stage ('Final') {
-            build job: 'customer-service-pipeline', wait: false
+            build job: 'customer-service', wait: false
         }      
-
     }
-
 }
